@@ -27,7 +27,7 @@ export default NextAuth({
     })
   ],
   callbacks: {
-    async signIn({ user, account, profile}: signInProps): Promise<boolean> {
+    async signIn({ user }: signInProps): Promise<boolean> {
       const { email } = user;
 
       try {
