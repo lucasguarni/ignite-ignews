@@ -13,7 +13,7 @@ type User = {
   };
 };
 
-export default async function(req: NextApiRequest, res: NextApiResponse) {
+export default async function subscribe(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     res.status(405).end('Method not allowed');
